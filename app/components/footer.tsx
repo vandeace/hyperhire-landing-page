@@ -23,7 +23,7 @@ const Footer = () => {
   return (
     <div className="mx-auto w-full max-w-6xl flex-auto p-4 pt-14 box-content">
       <div className="flex flex-row gap-x-20">
-        <div className="flex flex-col gap-y-4 max-w-[250px]">
+        <div className="flex flex-col gap-y-4 max-w-[250px] p-4">
           <Image
             src="/footer-logo.png"
             width={187}
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex flex-row gap-x-20">
-        <div className="grid grid-cols-2 max-w-[250px]">
+        <div className="grid grid-cols-2 max-w-[250px] p-4">
           <div className="flex flex-col font-black">
             <div className="text-[#343741]">상호명</div>
             <div className="text-[#5E626F] text-[13px] ">하이퍼하이어</div>
@@ -71,7 +71,7 @@ const Footer = () => {
             <div className="text-[#5E626F] text-[13px] ">Juhyun Kim</div>
           </div>
         </div>
-        <div className="flex flex-row gap-x-4">
+        <div className="flex flex-row gap-x-4 p-4">
           <div className="flex flex-col font-black">
             <div className="text-[#343741]">사업자등록번호 CIN</div>
             <div className="text-[#5E626F] text-[13px] ">427-86-01187</div>
@@ -91,7 +91,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="text-[#5E626F] text-[13px] font-extrabold mt-6">
+      <div className="text-[#5E626F] text-[13px] font-extrabold mt-6 p-4">
         ⓒ 2023 Hyperhire
       </div>
     </div>
