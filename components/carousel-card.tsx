@@ -58,7 +58,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ items }) => {
               key={index}
               className={cn(
                 "bg-[#EDFCFF] shadow-lg p-6 m-4 w-[260px] ml-[-10%] rounded-xl",
-                isActiveIndex && "py-10 w-[280px] ml-[-20%] bg-white"
+                isActiveIndex && "py-10 w-[280px] ml-[-36px] bg-white"
               )}
             >
               <div className="flex flex-col items-center h-full">

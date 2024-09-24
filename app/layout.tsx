@@ -20,9 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppinsFont.className}  antialiased`}>
-        <div className="w-full h-screen bg-gradient-to-br from-teal-400 via-cyan-500 to-blue-500">
-          {children}
-        </div>
+        <div className="w-full h-screen ">{children}</div>
       </body>
     </html>
   );
