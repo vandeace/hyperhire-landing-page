@@ -1,0 +1,12 @@
+.selected {
+  z-index: 1000;
+  margin-top: -16px !important;
+}
+
+.carousel * {
+  box-sizing: content-box;
+}
+
+.carousel.carousel-slider {
+  position: static;
+}
