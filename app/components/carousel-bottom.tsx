@@ -4,6 +4,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./carousel-bottom.css";
+import MotionDiv from "@/components/motion-div";
 const CarouselBottom = () => {
   const items = [
     {
@@ -48,43 +49,47 @@ const CarouselBottom = () => {
   };
 
   return (
-    <div className="relative w-full p-4 hidden md:block md:visible">
-      <Carousel
-        responsive={responsive}
-        removeArrowOnDeviceType={[
-          "tablet",
-          "mobile",
-          "desktop",
-          "superLargeDesktop",
-        ]}
-        itemClass="carousel-item-padding-40-px"
-        containerClass="carousel-container"
-        infinite
-        partialVisible={false}
-        autoPlay={true}
-        autoPlaySpeed={1000}
-        transitionDuration={1000}
-        swipeable={false}
-        draggable={false}
-      >
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className="py-4 items-center flex flex-row gap-y-4 overflow-x-auto relative"
-          >
-            <div>
-              <Image
-                alt={item.title}
-                src={item.iconUrl}
-                width={56}
-                height={56}
-              />
+    <MotionDiv delayOffset={0.9}>
+      <div className="relative w-full p-4 hidden md:block md:visible py-6">
+        <Carousel
+          responsive={responsive}
+          removeArrowOnDeviceType={[
+            "tablet",
+            "mobile",
+            "desktop",
+            "superLargeDesktop",
+          ]}
+          itemClass="carousel-item-padding-40-px"
+          containerClass="carousel-container"
+          infinite
+          partialVisible={false}
+          autoPlay={true}
+          autoPlaySpeed={1000}
+          transitionDuration={1000}
+          swipeable={false}
+          draggable={false}
+        >
+          {items.map((item, index) => (
+            <div
+              key={index}
+              className="py-4 items-center flex flex-row gap-y-4 overflow-x-auto relative"
+            >
+              <div>
+                <Image
+                  alt={item.title}
+                  src={item.iconUrl}
+                  width={56}
+                  height={56}
+                />
+              </div>
+              <p className="font-black text-2xl text-white ml-2">
+                {item.title}
+              </p>
             </div>
-            <p className="font-black text-2xl text-white ml-2">{item.title}</p>
-          </div>
-        ))}
-      </Carousel>
-    </div>
+          ))}
+        </Carousel>
+      </div>
+    </MotionDiv>
   );
 };
 
