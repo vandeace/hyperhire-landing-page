@@ -22,7 +22,7 @@ const Footer = () => {
   ];
   return (
     <div className="mx-auto w-full max-w-6xl flex-auto p-4 pt-14 box-content">
-      <div className="flex flex-row gap-x-20">
+      <div className="flex md:flex-row gap-x-20 flex-col">
         <div className="flex flex-col gap-y-4 max-w-[250px] p-4">
           <Image
             src="/footer-logo.png"
@@ -36,9 +36,12 @@ const Footer = () => {
           <p className="text-sm font-black">010-0000-0000</p>
           <p className="text-sm font-black">aaaaa@naver.com</p>
         </div>
-        <div className="flex flex-1">
+        <div className="flex-1 grid-cols-2 md:grid-cols-4 grid">
           {items.map((item) => (
-            <div key={item.id} className="flex flex-col h-[140px] bg-white p-4">
+            <div
+              key={item.id}
+              className="flex flex-col h-[140px] bg-white p-4 max-w-[160px] box-content"
+            >
               <Image
                 src={`/footer-icon-${item.id}.png`}
                 alt={`footer-icon-${item.id}`}
@@ -56,8 +59,8 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-row gap-x-20">
-        <div className="grid grid-cols-2 max-w-[250px] p-4">
+      <div className="flex md:flex-row flex-col gap-x-20 mt-4">
+        <div className="grid grid-cols-2 md:max-w-[250px] p-4">
           <div className="flex flex-col font-black">
             <div className="text-[#343741]">상호명</div>
             <div className="text-[#5E626F] text-[13px] ">하이퍼하이어</div>
@@ -71,7 +74,7 @@ const Footer = () => {
             <div className="text-[#5E626F] text-[13px] ">Juhyun Kim</div>
           </div>
         </div>
-        <div className="flex flex-row gap-x-4 p-4">
+        <div className="flex flex-col md:flex-row gap-4 p-4">
           <div className="flex flex-col font-black">
             <div className="text-[#343741]">사업자등록번호 CIN</div>
             <div className="text-[#5E626F] text-[13px] ">427-86-01187</div>
