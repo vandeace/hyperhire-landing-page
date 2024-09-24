@@ -48,7 +48,7 @@ const CarouselBottom = () => {
   };
 
   return (
-    <div className="relative w-full p-4">
+    <div className="relative w-full p-4 hidden md:block md:visible">
       <Carousel
         responsive={responsive}
         removeArrowOnDeviceType={[

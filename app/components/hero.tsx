@@ -55,9 +55,15 @@ const Hero = () => {
   ];
 
   return (
-    <div className="p-4 mt-10 text-white grid grid-cols-2">
+    <div className="p-4 mt-20 text-white grid md:grid-cols-2 grid-cols-1">
       {/* left section */}
-      <div>
+      <div className="relative">
+        <div className="absolute left-20 top-[-50px] -translate-x-1/2 bg-white text-green-500 px-3 py-1 rounded-md text-xl font-semibold z-20 ">
+          <div className="relative flex items-center">
+            <div className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 translate-y-full w-4 h-4 bg-white rotate-45 z-0"></div>
+            <div className="text-[#40E2E8]">풀타임, 파트타임</div>
+          </div>
+        </div>
         <h1 className="text-5xl font-black">최고의 실력을 가진</h1>
         <h1 className="text-5xl font-black mt-2">
           외국인 인재를 찾고 계신가요?
@@ -68,11 +74,11 @@ const Hero = () => {
           1주일 이내에 원격으로 채용해보세요.
         </h4>
 
-        <h5 className="mt-6 font-black text-xl underline">
+        <h5 className="mt-6 font-black text-xl underline hidden md:visible">
           개발자가 필요하신가요?
         </h5>
 
-        <div className="grid grid-cols-3 gap-4 mt-14">
+        <div className="md:grid grid-cols-3 gap-4 mt-14 hidden md:visible">
           {textItems.map((item) => (
             <div
               key={item.title}
@@ -87,7 +93,7 @@ const Hero = () => {
         </div>
       </div>
       {/* right section */}
-      <div className="relative ">
+      <div className="relative mt-20 md:mt-0">
         <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 bg-white text-green-500 px-3 py-1 rounded-md text-xl font-semibold z-20 ">
           <div className="relative flex items-center">
             <div className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 translate-y-full w-4 h-4 bg-white rotate-45 z-0"></div>

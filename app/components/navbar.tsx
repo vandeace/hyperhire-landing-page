@@ -31,7 +31,7 @@ const Navbar = () => {
       <div>
         <Image src={"/nav-logo.png"} width={114} height={21} alt="nav-logo" />
       </div>
-      <div className="text-white flex items-center">
+      <div className="text-white md:flex items-center md:visible hidden">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -54,7 +54,7 @@ const Navbar = () => {
         </NavigationMenu>
         <span className="ml-4">해외 개발자 활용 서비스</span>
       </div>
-      <button className="bg-white text-[#4A77FF] py-[6px] px-6 rounded-lg">
+      <button className="bg-white text-[#4A77FF] py-[6px] px-6 rounded-lg md:visible hidden">
         문의하기
       </button>
     </div>

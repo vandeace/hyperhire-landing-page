@@ -21,7 +21,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="mx-auto w-full max-w-6xl flex-auto p-4 pt-14 box-content">
+    <div className="mx-auto max-w-6xl flex-auto p-4 pt-14 box-content">
       <div className="flex md:flex-row gap-x-20 flex-col">
         <div className="flex flex-col gap-y-4 max-w-[250px] p-4">
           <Image

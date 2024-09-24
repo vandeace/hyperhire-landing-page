@@ -27,8 +27,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ items }) => {
         infiniteLoop
         centerMode
         centerSlidePercentage={50}
-        emulateTouch
-        swipeable
+        // autoPlay
         showIndicators={false}
         onChange={(e) => {
           setactiveIndex(e);
@@ -36,7 +35,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ items }) => {
         renderArrowPrev={(clickHandler: () => void) => (
           <button
             onClick={clickHandler}
-            className="absolute left-[-40px] top-1/2 -translate-y-1/2 p-2 z-10"
+            className="absolute left-[-30px] md:left-[-40px] top-1/2 -translate-y-1/2 p-0 md:p-2 z-10"
           >
             <ChevronLeft className="w-6 h-6 text-white-600" />
           </button>
@@ -44,7 +43,7 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ items }) => {
         renderArrowNext={(clickHandler: () => void) => (
           <button
             onClick={clickHandler}
-            className="absolute right-[-40px] top-1/2 -translate-y-1/2 p-2 z-10"
+            className="absolute right-[-30px] md:right-[-40px] top-1/2 -translate-y-1/2 p-0 md:p-2 z-10"
           >
             <ChevronRight className="w-6 h-6 text-white-600" />
           </button>
@@ -58,7 +57,8 @@ const CarouselCard: React.FC<CarouselCardProps> = ({ items }) => {
               key={index}
               className={cn(
                 "bg-[#EDFCFF] shadow-lg p-6 m-4 w-[260px] ml-[-10%] rounded-xl",
-                isActiveIndex && "py-10 w-[280px] ml-[-36px] bg-white"
+                isActiveIndex &&
+                  "md:py-10 p-4 w-[200px] md:w-[280px] md:ml-[-36px] ml-[-24px] bg-white max-h-[311px]"
               )}
             >
               <div className="flex flex-col items-center h-full">
