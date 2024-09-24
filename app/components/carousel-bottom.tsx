@@ -59,11 +59,13 @@ const CarouselBottom = () => {
         ]}
         itemClass="carousel-item-padding-40-px"
         containerClass="carousel-container"
+        infinite
         partialVisible={false}
-        infinite={true}
         autoPlay={true}
-        autoPlaySpeed={5000}
-        transitionDuration={5000}
+        autoPlaySpeed={1000}
+        transitionDuration={1000}
+        swipeable={false}
+        draggable={false}
       >
         {items.map((item, index) => (
           <div
